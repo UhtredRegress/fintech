@@ -17,6 +17,7 @@ namespace fintech.Data.Model
         [MaxLength(20)]
         [Required]
         public string AccountNumber { get; set; }
+        
         [RegularExpression(@"^[a-zA-D\d]+$", ErrorMessage = "Owner name must contain only valid characters")]
         [MaxLength(20)]
         [Required]
@@ -25,9 +26,11 @@ namespace fintech.Data.Model
         [Precision(18,3)]
         [Required]
         public decimal Balance { get; set; } 
+        
         [Required]
         [RegularExpression(@"^\d+$", ErrorMessage = "Phone number must contains numeric character only")]
         public string PhoneNumber { get; set; }
+        
         [EmailAddress]
         [Required]
         public string Email { get; set; }
