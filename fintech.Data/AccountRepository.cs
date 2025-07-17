@@ -23,5 +23,10 @@ namespace fintech.Data
             await _dbContext.SaveChangesAsync();
             return account;
         }
+
+        public async Task<Account?> FindAccountById(int id)
+        {
+            return await _dbContext.FindAsync<Account>(id);
+        }
     }
 }

@@ -10,5 +10,6 @@ namespace fintech.Data.IRepository
     public interface IAccountRepository
     {
         Task<Account> CreateAccount(Account account);
+        Task<Account?> FindAccountById(int id);
     }
 }
