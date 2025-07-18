@@ -12,7 +12,7 @@ namespace fintech.Service
             _accountRepository = accountRepository;
         }
 
-        public async Task<Account?> CreateAccount(Account account)
+        public async Task<Account> CreateAccount(Account account)
         {
             var foundAccount = await _accountRepository.FindAccountById(account.Id);
             if (foundAccount != null)

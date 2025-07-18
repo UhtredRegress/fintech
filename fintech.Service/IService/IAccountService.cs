@@ -9,6 +9,6 @@ namespace fintech.Service.IService
 {
     public interface IAccountService
     {
-        Task<Account?> CreateAccount(Account account);
+        Task<Account> CreateAccount(Account account);
     }
 }

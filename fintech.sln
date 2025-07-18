@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36301.6 d17.14
+VisualStudioVersion = 17.14.36301.6
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fintech.Data", "fintech.Data\fintech.Data.csproj", "{961892D7-202B-404D-A88A-CC6DB324B85C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fintech.Service", "fintech.Service\fintech.Service.csproj", "{1BBB5D23-69E9-4EC0-99DC-4E8526824F3B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fintech.API", "fintech.API\fintech.API.csproj", "{4CEFF4E5-1AF3-4B68-B98E-1FD51E44F16D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{961892D7-202B-404D-A88A-CC6DB324B85C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{961892D7-202B-404D-A88A-CC6DB324B85C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{961892D7-202B-404D-A88A-CC6DB324B85C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BBB5D23-69E9-4EC0-99DC-4E8526824F3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BBB5D23-69E9-4EC0-99DC-4E8526824F3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BBB5D23-69E9-4EC0-99DC-4E8526824F3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BBB5D23-69E9-4EC0-99DC-4E8526824F3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CEFF4E5-1AF3-4B68-B98E-1FD51E44F16D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CEFF4E5-1AF3-4B68-B98E-1FD51E44F16D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CEFF4E5-1AF3-4B68-B98E-1FD51E44F16D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CEFF4E5-1AF3-4B68-B98E-1FD51E44F16D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
