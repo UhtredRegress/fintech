@@ -24,9 +24,9 @@ namespace fintech.Data
             return account;
         }
 
-        public async Task<Account?> FindAccountById(int id)
+        public async Task<Account?> FindAccountByAccountNumber(string accountNumber)
         {
-            return await _dbContext.FindAsync<Account>(id);
+            return await _dbContext.Set<Account>().FirstOrDefaultAsync(a => a.AccountNumber == accountNumber);
         }
     }
 }
