@@ -19,6 +19,7 @@ namespace fintech.Service
             {
                 throw new Exception("Account number is already existed");
             }
+            account.CreatedAt = DateTime.UtcNow;
 
             return await _accountRepository.CreateAccount(account);
         }

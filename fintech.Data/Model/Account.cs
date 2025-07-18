@@ -34,7 +34,6 @@ namespace fintech.Data.Model
         [EmailAddress]
         [Required]
         public string Email { get; set; }
-        [Required]
-        public DateTime CreatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
     }
 }
