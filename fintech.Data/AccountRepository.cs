@@ -11,15 +11,15 @@ namespace fintech.Data
 {
     public class AccountRepository:IAccountRepository
     {
-        private readonly DbContext _dbContext;
+        private readonly FintechDbContext _dbContext;
 
-        public AccountRepository(DbContext dbContext) 
+        public AccountRepository(FintechDbContext dbContext) 
         {
             _dbContext = dbContext;
         }
         public async Task<Account> CreateAccount(Account account)
         {
-            await _dbContext.AddAsync(account);
+            await _dbContext.Set<Account>().AddAsync(account);
             await _dbContext.SaveChangesAsync();
             return account;
         }
