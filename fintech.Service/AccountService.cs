@@ -14,12 +14,12 @@ namespace fintech.Service
 
         public async Task<Account> CreateAccount(Account account)
         {
-            var foundAccount = await _accountRepository.FindAccountById(account.Id);
+            var foundAccount = await _accountRepository.FindAccountByAccountNumber(account.AccountNumber);
             if (foundAccount != null)
             {
                 throw new Exception("Account number is already existed");
             }
-            account.CreatedAt = DateTime.UtcNow;
+            account.CreatedAt = DateTime.Now;
 
             return await _accountRepository.CreateAccount(account);
         }
