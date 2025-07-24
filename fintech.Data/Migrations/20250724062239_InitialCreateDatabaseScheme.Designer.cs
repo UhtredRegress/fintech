@@ -12,8 +12,8 @@ using fintech.Data.Model;
 namespace fintech.Data.Migrations
 {
     [DbContext(typeof(FintechDbContext))]
-    [Migration("20250718152742_SlightlyModifiedAccountTable")]
-    partial class SlightlyModifiedAccountTable
+    [Migration("20250724062239_InitialCreateDatabaseScheme")]
+    partial class InitialCreateDatabaseScheme
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -56,7 +56,8 @@ namespace fintech.Data.Migrations
 
                     b.Property<string>("PhoneNumber")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
 
                     b.HasKey("Id");
 
