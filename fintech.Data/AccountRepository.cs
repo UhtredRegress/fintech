@@ -28,5 +28,12 @@ namespace fintech.Data
         {
             return await _dbContext.Set<Account>().FirstOrDefaultAsync(a => a.AccountNumber == accountNumber);
         }
+
+        public async Task<Account> TransactionMoney(Account account, decimal newBalance) 
+        {
+            account.Balance = newBalance;
+            await _dbContext.SaveChangesAsync();
+            return account;
+        }
     }
 }

@@ -11,5 +11,6 @@ namespace fintech.Data.IRepository
     {
         Task<Account> CreateAccount(Account account);
         Task<Account?> FindAccountByAccountNumber(string accountNumber);
+        Task<Account> TransactionMoney(Account account, decimal newBalance);
     }
 }
