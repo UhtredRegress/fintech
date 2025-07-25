@@ -1,5 +1,6 @@
 ﻿using fintech.Data.Model;
 using fintech.Service.IService;
+using fintech.Shared.CustomException;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
@@ -29,7 +30,7 @@ namespace fintech.API
                 var createdAccount = await _accountService.CreateAccount(account);
                 return Created($"/account/{createdAccount.Id}", createdAccount);
             }
-            catch (Exception ex) 
+            catch (NotExistAccountException ex) 
             {
                 return BadRequest(ex.Message);
             

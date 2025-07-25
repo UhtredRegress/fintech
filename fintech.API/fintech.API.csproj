@@ -25,6 +25,7 @@
   <ItemGroup>
     <ProjectReference Include="..\fintech.Data\fintech.Data.csproj" />
     <ProjectReference Include="..\fintech.Service\fintech.Service.csproj" />
+    <ProjectReference Include="..\fintech.Shared\fintech.Shared.csproj" />
   </ItemGroup>
 
 </Project>
