@@ -7,11 +7,11 @@ service TransactionService {
 }
 
 message TransactionRequest {
-	int32 account_number = 1;
+	string account_number = 1;
 	int32 amount = 2;
 }
 
 message TransactionReply {
-	int32 account_number = 1;
+	string account_number = 1;
 	int32 new_balance = 2;
 }
