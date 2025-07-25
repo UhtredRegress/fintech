@@ -1,0 +1,17 @@
+﻿syntax = "proto3";
+
+package fintech.Transactor;
+
+service TransactionService {
+	rpc WithdrawMoney (TransactionRequest) returns (TransactionReply);
+}
+
+message TransactionRequest {
+	int32 account_number = 1;
+	int32 amount = 2;
+}
+
+message TransactionReply {
+	int32 account_number = 1;
+	int32 new_balance = 2;
+}
