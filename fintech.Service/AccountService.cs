@@ -1,6 +1,7 @@
 ﻿using fintech.Data.IRepository;
 using fintech.Data.Model;
 using fintech.Service.IService;
+using fintech.Shared.CustomException;
 
 namespace fintech.Service
 {
@@ -17,7 +18,7 @@ namespace fintech.Service
             var foundAccount = await _accountRepository.FindAccountByAccountNumber(account.AccountNumber);
             if (foundAccount != null)
             {
-                throw new Exception("Account number is already existed");
+                throw new NotExistAccountException("Account number is already existed");
             }
             account.CreatedAt = DateTime.Now;
 
